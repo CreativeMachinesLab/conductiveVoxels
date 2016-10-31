@@ -1,0 +1,17 @@
+K 13
+svn:externals
+V 112
+https://svn.code.sf.net/p/voxelyze/code/Voxelyze Voxelyze
+https://svn.code.sf.net/p/voxcad/code/QTUtils QTUtils
+
+K 10
+svn:ignore
+V 52
+*.sdf
+*.suo
+Debug
+Release
+_UpgradeReport_Files
+ipch
+
+END
