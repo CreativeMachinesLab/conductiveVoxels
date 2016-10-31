@@ -3,7 +3,7 @@
 #include "VX_Environment.h"
 #include "VX_Sim.h"
 #include "VX_SimGA.h"
-
+#include <math.h> 
 
 int main(int argc, char *argv[])
 {
@@ -112,10 +112,12 @@ int main(int argc, char *argv[])
 			std::cout << "Vox 0 Electrically Active:" <<  Simulator.VoxArray[0].GetElectricallyActiveOld() << " -> " << Simulator.VoxArray[0].GetElectricallyActiveNew() << std::endl;
 			std::cout << "Vox 1 Electrically Active:" <<  Simulator.VoxArray[1].GetElectricallyActiveOld() << " -> " << Simulator.VoxArray[1].GetElectricallyActiveNew() << std::endl;
 			std::cout << "Vox 2 Electrically Active:" <<  Simulator.VoxArray[2].GetElectricallyActiveOld() << " -> " << Simulator.VoxArray[2].GetElectricallyActiveNew() << std::endl;
-
-			std::cout << "Vox 0 GetRepolarizationStartTime:" <<  Simulator.VoxArray[0].GetRepolarizationStartTime() << std::endl;
-			std::cout << "Vox 1 GetRepolarizationStartTime:" <<  Simulator.VoxArray[1].GetRepolarizationStartTime() << std::endl;
-			std::cout << "Vox 2 GetRepolarizationStartTime:" <<  Simulator.VoxArray[2].GetRepolarizationStartTime() << std::endl;
+			
+			std::cout << "Vox 0 Displacement:" <<  pow(pow(Simulator.VoxArray[0].GetCurPos().x,2)+pow(Simulator.VoxArray[0].GetCurPos().y,2),0.5) << std::endl;		
+			std::cout << std::endl;
+			//std::cout << "Vox 0 GetRepolarizationStartTime:" <<  Simulator.VoxArray[0].GetRepolarizationStartTime() << std::endl;
+			//std::cout << "Vox 1 GetRepolarizationStartTime:" <<  Simulator.VoxArray[1].GetRepolarizationStartTime() << std::endl;
+			//std::cout << "Vox 2 GetRepolarizationStartTime:" <<  Simulator.VoxArray[2].GetRepolarizationStartTime() << std::endl;
 			//std::cout << Simulator.pEnv->pObj->GetBaseMat(Simulator.VoxArray[45].GetMaterial())->GetName() << std::endl;
 			// std::cout << Simulator.pEnv->pObj->GetBaseMat(Simulator.VoxArray[250].GetMaterial())->GetCurMatTemp() << std::endl;
 			// std::cout << Simulator.VoxArray[250].GetCurScale().x << std::endl;
